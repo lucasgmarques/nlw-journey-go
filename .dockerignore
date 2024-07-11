@@ -1,0 +1,44 @@
+# Ignore development-related files
+compose-dev.yml
+compose-prod.yml
+
+# Ignore generated files
+out.json
+
+# Ignore test data (if applicable)
+# Add a pattern like "internal/mailer/mailpit/testdata/*" if you have test data
+
+# Ignore IDE/editor specific files (adjust based on your IDE)
+.idea/
+.vscode/
+
+# Ignore version control related files
+.git/
+.gitignore
+
+# Ignore build artifacts
+*.o
+*.a
+
+# Ignore cache files
+.cache/
+
+# Ignore temporary files
+tmp/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore linters/formatters config files
+.golangci.yml
+.editorconfig
+
+# Ignore anything matched by go mod download
+**/vendor/
+
+# Specific file ignores
+gen.go
+
+# Ignore all files and directories within internal/migrations except tern.conf
+internal/migrations/*
+!internal/migrations/tern.conf
