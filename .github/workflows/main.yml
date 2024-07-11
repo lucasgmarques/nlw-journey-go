@@ -32,5 +32,5 @@ jobs:
       - name: Push image
         run: | 
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:${{ steps.generate_sha.outputs.sha }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:${{ steps.generate_sha.outputs.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:latest
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:${{ steps.generate_sha.outputs.sha }} ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:latest
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/nlw-api-journey:latest
